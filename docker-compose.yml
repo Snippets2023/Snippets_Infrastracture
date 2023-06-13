@@ -3,8 +3,6 @@ version: '3'
 services:
   snippets-crud-api:
     container_name: "crud-api"
-    depends_on:
-      - crud-db
     image: ghcr.io/snippets2023/snippets_crud:sha256-8ccc72a4d00e511780d6d5dba13e012bcbf1b8b632fb695699dad5bd1142e304.sig
     ports:
       - 8000:8000
