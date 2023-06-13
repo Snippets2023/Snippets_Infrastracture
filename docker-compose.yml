@@ -28,3 +28,6 @@ services:
     volumes:
       - cruddata:/var/lib/postgresql/data
       
+  volumes:
+    cruddata:
+      external: true
