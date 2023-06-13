@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  follow-api:
+    container_name: "crud-api"
+    depends_on:
+      - follow_db
+    image: ghcr.io/snippets2023/snippets_crud:${ENV_TAG}
+    ports:
+      - 8000:8000
