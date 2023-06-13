@@ -15,7 +15,7 @@ services:
       DB_HOST: snippets-db
       DB_PORT: 5432
       
- crud_db:
+ crud-db:
     container_name: "crud-db"
     image: postgres:12
     ports:
