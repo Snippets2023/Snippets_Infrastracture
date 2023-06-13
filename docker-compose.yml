@@ -12,7 +12,7 @@ services:
       DB_USER: sa
       DB_PASSWORD: password
       DB_NAME: snippets-db
-      DB_HOST: snippets-db
+      DB_HOST: crud-db
       DB_PORT: 5432
       
       
