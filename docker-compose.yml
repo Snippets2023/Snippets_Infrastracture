@@ -3,6 +3,27 @@ version: '3'
 services:
   snippets-crud-api:
     container_name: "crud-api"
+    depends_on:
+      - crud-db
     image: ghcr.io/snippets2023/snippets_crud:master
     ports:
       - 8000:8000
+    environment:
+      DB_USER: sa
+      DB_PASSWORD: password
+      DB_NAME: snippets-db
+      DB_HOST: snippets-db
+      DB_PORT: 5432
+      
+ crud_db:
+    container_name: "crud-db"
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: snippets-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      
